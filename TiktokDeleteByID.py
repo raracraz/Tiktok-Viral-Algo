@@ -1,60 +1,53 @@
+import time
+import configparser
+import sys
+import shutil
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-import time
-import configparser
-import sys
+
 
 # Reading from the config.ini file
 config = configparser.ConfigParser()
 config.read('config.ini')
 
-username = config['account']['username']
-password = config['account']['password']
+sessionid = config['cookie']['sessionid']
 
 # Set up Chrome options for headless mode
 chrome_options = webdriver.ChromeOptions()
 # chrome_options.add_argument("--headless")
-chrome_options.add_argument("--detached --incognito --window-size=1920x1080")
-chrome_options.add_argument("--user-data-dir=/temp_profile")
+chrome_options.add_argument("--detached")
+chrome_options.add_argument("--incognito")
+chrome_options.add_argument("--window-size=1920x1080")
+chrome_options.add_argument("--user-data-dir=/temp_profile")  # Set the correct path for the user data directory
 
 # Set up Selenium WebDriver (e.g., using Chrome)
 driver = webdriver.Chrome(options=chrome_options)
-# driver = webdriver.Chrome()
 
 # Navigate to TikTok login page
-driver.get("https://www.tiktok.com/login/phone-or-email/email")
+driver.get("https://www.tiktok.com")
 
-# Delete all cookies after navigating to the page
-driver.delete_all_cookies()
+# Add the session ID to the cookies
+driver.add_cookie({'name': 'sessionid', 'value': sessionid})
 
-# Enter your username and password
-# username_field = driver.find_element(By.NAME, "username")  # Replace 'username' with the actual field name
-# password_field = driver.find_element(By.NAME, "password")  # Replace 'password' with the actual field name
-
-time.sleep(2)
-
-try:
-    username_field = driver.find_element(By.NAME, "username")
-    password_field = driver.find_element(By.CSS_SELECTOR, "input[type='password']")
-    username_field.send_keys(username)
-    password_field.send_keys(password)
-    password_field.send_keys(Keys.RETURN)  # Press Enter to log in
-except:
-    print("Login failed!")
-    sys.exit(1)
+# Refresh the page
+driver.refresh()
 
 # Wait for login to complete, Check if login was successful by checking the URL, 
 # if after 10 seconds the url is not https://www.tiktok.com/foryou, then exit the program
 try:
-    WebDriverWait(driver, 60).until(EC.url_to_be("https://www.tiktok.com/foryou"))
+    WebDriverWait(driver, 10).until(EC.url_to_be("https://www.tiktok.com/explore"))
     print("Login successful!")
-    driver.save_screenshot("screenshots/screenshot.png")
+    
+    # go to the profile page
+    
+    
+    
 except:
     print("Login failed!")
-    driver.save_screenshot("screenshots/screenshot.png")
+    driver.save_screenshot("screenshot.png")
     sys.exit(1)
 
 # At the end of your script, delete the custom user data directory
