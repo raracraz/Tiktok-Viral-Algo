@@ -58,11 +58,6 @@ def delete_video(video_id):
     # [{"key":"sec-ch-ua","value":"\"Chromium\";v=\"116\", \"Not)A;Brand\";v=\"24\", \"Opera GX\";v=\"102\""},{"key":"content-type","value":"application/x-www-form-urlencoded"},{"key":"x-secsdk-csrf-token","value":"0001000000013e6e45a29ebfa8debb51fc4709401de5bd7dc010a974789c5b5c6d673897e0bb179141431abcd9e5"},{"key":"tt-csrf-token","value":"f3yJULJf-c9ox8doluOV0ynrd9lBpG5qP3s0"},{"key":"User-Agent","value":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36 OPR/102.0.0.0"},{"key":"sec-ch-ua-mobile","value":"?0"},{"key":"sec-ch-ua-platform","value":"\"Windows\""},{"key":"Accept","value":"*/*"},{"key":"host","value":"www.tiktok.com"}]
     
     headers = {
-        "sec-ch-ua": "\"Chromium\";v=\"116\", \"Not)A;Brand\";v=\"24\", \"Opera GX\";v=\"102\"",
-        "content-type": "application/x-www-form-urlencoded",
-        "x-secsdk-csrf-token": "0001000000013e6e45a29ebfa8debb51fc4709401de5bd7dc010a974789c5b5c6d673897e0bb179141431abcd9e5",
-        "tt-csrf-token": "f3yJULJf-c9ox8doluOV0ynrd9lBpG5qP3s0",
-        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36 OPR/102.0.0.0",
         "sec-ch-ua-mobile": "?0",
         "sec-ch-ua-platform": "\"Windows\"",
         "Accept": "*/*",
