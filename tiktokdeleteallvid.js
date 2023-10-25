@@ -35,6 +35,5 @@
     Promise.all(promises)
         .then(vs => {
             console.log("All done, reloading the page!");
-            window.location.reload(true);
         });
 })()

@@ -1,0 +1,33 @@
+POST /api/aweme/delete/?aweme_id=7293775520586550535&target=7293775520586550535 HTTP/2
+Host: www.tiktok.com
+Cookie: tt_csrf_token=o9zwZm9M-zRH7xcTFsBc0YH4C8fET8chjSOY; ttwid=1%7C1IMl1KBUZEKRCchExiSoTDxkDFIFGXv4R37OfS6-qRo%7C1698219113%7C45fb6b98818c3d26fa04b02a212cf76e74ddb42de2ae71f7fbcd025e0143222f; tt_chain_token=IYJRveocE3ZOfFPGaKFzlw==; __tea_cache_tokens_1988={%22_type_%22:%22default%22%2C%22user_unique_id%22:%227293795493876336146%22%2C%22timestamp%22:1698219122468}; tiktok_webapp_theme=light
+Content-Length: 0
+Sec-Ch-Ua: "Chromium";v="118", "Google Chrome";v="118", "Not=A?Brand";v="99"
+X-Akamai-Request-Id: 1f7817eb.61d601a1
+Strict-Transport-Security: max-age=31536000; includeSubDomains
+Content-Encoding: br
+X-Tt-Trace-Tag: id=16;cdn-cache=miss;type=dyn
+Bd-Tt-Error-Code: 0
+Tt_stable: 1
+X-Tt-Trace-Id: 00-2310250610523D9C4F75F8B2C6704AF8-1657B4187527C2C2-00
+X-Cache: TCP_MISS from a23-59-80-117.deploy.akamaitechnologies.com (AkamaiGHost/11.3.0-51620215) (-)
+Server-Timing: cdn-cache; desc=MISS, edge; dur=19, origin; dur=266
+Sec-Ch-Ua-Platform: "Windows"
+Pragma: no-cache
+X-Cache-Remote: TCP_MISS from a23-52-171-124.deploy.akamaitechnologies.com (AkamaiGHost/11.3.0-51620215) (-)
+X-Tt-Logid: 202310250610523D9C4F75F8B2C6704AF8
+Sec-Ch-Ua-Mobile: ?0
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/118.0.0.0 Safari/537.36
+Content-Type: application/json; charset=utf-8
+Accept: application/json
+Cache-Control: max-age=0, no-cache, no-store
+X-Origin-Response-Time: 266,23.52.171.124
+X-Tt-Trace-Host: 0120a03edef05f4fbfdf69c56b4c0157271e3f1ed462fa65eaa90451cb2758630c046a90b0f6f9bf907828194d4f6215b483b0c723c4573d1d983ead03e2150791a0ca72d3ba4530be8f329bf3282c3d8efddc7f049e1d827d7f00df8638e592eea2c1b3f71f5efca72f8348ff9345d6ec
+Expires: Wed, 25 Oct 2023 06:10:53 GMT
+Origin: https://www.tiktok.com
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: cors
+Sec-Fetch-Dest: empty
+Referer: https://www.tiktok.com/@crazzzsg
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.9
